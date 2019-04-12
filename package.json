@@ -1,36 +1,44 @@
 {
-  "name": "StanleyWP",
-  "version": "1.0.0",
-  "description": "Bootstrap 4 WordPress Theme",
-  "main": "",
+  "name": "stanleywp",
+  "version": "1.0.1",
+  "description": "Gulp 4 file for BootStrap 4",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsktech/stanleywp.git"
+    "url": "git+https://github.com/tsktech/GulpFiles.git"
   },
-  "author": "Brad Williams",
+  "keywords": [
+    "gulp",
+    "bootstrap",
+    "wp"
+  ],
+  "author": "Srikanth Kamath",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tsktech/stanleywp/issues"
+    "url": "https://github.com/tsktech/GulpFiles/issues"
   },
-  "homepage": "https://github.com/tsktech/stanleywp#readme",
+  "homepage": "https://github.com/tsktech/GulpFiles#readme",
   "devDependencies": {
-    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.3",
     "critical": "^1.3.4",
+    "eslint": "^5.16.0",
+    "fancy-log": "^1.3.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-include": "^2.4.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-include": "^2.4.1",
     "gulp-jshint": "^2.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-watch": "^5.0.1",
     "gulp-zip": "^4.2.0",
-    "jquery": "^3.3.1",
     "jshint": "^2.10.2",
-    "jshint-stylish": "^2.2.1",
-    "popper.js": "^1.15.0"
+    "jshint-stylish": "^2.2.1"
   }
 }
