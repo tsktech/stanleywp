@@ -153,7 +153,7 @@ options.sassmin = {
 };
 
 // Sass
-function sass () {
+function sassCSS () {
     return gulp.src('./sass/style.scss')
         .pipe(plumber())
         .pipe(sass(options.sass).on('error', sass.logError))
@@ -211,7 +211,7 @@ function watch () {
 	});
 	// gulp.watch(jsSRC, jsCheck);
 	gulp.watch(jsSRC, gulp.series(jsCheck , scripts));
-	gulp.watch(cssSRC, gulp.series(sass, sassMin));
+	gulp.watch(cssSRC, gulp.series(sassCSS, sassMin));
 	gulp.watch(imgSRC, imgmin);
 	gulp.watch(browserSyncWatchFiles).on('change', browserSync.reload);
 }
@@ -220,7 +220,7 @@ exports.watch = watch;
 exports.zip = zippackage;
 exports.jscheck = jsCheck;
 exports.scripts = scripts;
-exports.sass = sass;
+exports.sass = sassCSS;
 exports.sassMin = sassMin;
 exports.imgmin = imgmin;
 
