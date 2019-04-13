@@ -7195,10 +7195,10 @@ a.text-dark:hover, a.text-dark:focus {
 .group-blog .byline {
   display: inline; }
 
-.post {
-  margin-bottom: 4em;
-  padding-bottom: 1em; }
-
+/*.post {
+	margin-bottom: 4em;
+	padding-bottom: 1em;
+}*/
 .post-thumbnail {
   margin-bottom: 1em; }
 
@@ -7259,10 +7259,13 @@ a.text-dark:hover, a.text-dark:focus {
 /*article {
   background: $black;
 }*/
-.blog-post {
+.post {
   margin: 0;
-  padding: 3rem 0; }
-  .blog-post:nth-child(odd) {
+  padding: 2rem 0; }
+
+.blog .post {
+  padding: 6rem 0; }
+  .blog .post:nth-child(odd) {
     background-color: #f8f9fa; }
 
 /*--------------------------------------------------------------
