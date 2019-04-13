@@ -13,6 +13,7 @@ var gulp 		 = require('gulp'),
 	include      = require('gulp-include'),
 	sass         = require('gulp-sass'),
 	imagemin     = require('gulp-imagemin'),
+	changed 	 = require('gulp-changed'),
 	zip          = require('gulp-zip');
 
 // critical 	 = require('critical') is no longer require cause could not get critical.generate to work
