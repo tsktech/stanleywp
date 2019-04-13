@@ -1,10 +1,17 @@
 .site-header {
 	margin-bottom: 3em;
 }
+
 /*
 .navbar {
 	background-color: $custom-colors;
 }*/
+
+.blog {
+	.site-header {
+		margin-bottom: 0;
+	}
+}
 
 .navbar-brand {
 	a {

@@ -35,7 +35,7 @@
 	              'theme_location' => 'primary',
 	              'depth'      => 2,
 	              'container'  => false,
-	              'menu_class'     => 'navbar-nav ml-auto',
+	              'menu_class' => 'navbar-nav ml-auto',
 	              'walker'     => new Bootstrap_Walker_Nav_Menu()
 	              );
 	            if (has_nav_menu('primary')) {

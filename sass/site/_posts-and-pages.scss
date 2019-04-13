@@ -77,5 +77,18 @@
 	}
 }
 
+/*article {
+  background: $black;
+}*/
+
+.blog-post {
+  margin:0;
+  padding: 3rem 0;
+
+  &:nth-child(odd) {
+    background-color: $gray-100;
+  }
+}
+
 
 
