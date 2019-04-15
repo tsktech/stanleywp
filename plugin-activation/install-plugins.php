@@ -96,7 +96,19 @@ function stanleywp_register_required_plugins() {
 			'slug'      => 'cbm2',
 			'source'    => 'https://downloads.wordpress.org/plugin/cmb2.zip',
 			'required'  => true,
-			'force_deactivation' => true,
+			'force_deactivation' => false,
+		),
+
+		array(
+			'name'               => 'MVPWP CPT Plugin', // The plugin name.
+			'slug'               => 'mvpwp-cpt-plugin', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugin-activation/plugins/mvpwp-cpt-plugin.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
 		// // This is an example of the use of 'is_callable' functionality. A user could - for instance -
@@ -111,9 +123,6 @@ function stanleywp_register_required_plugins() {
 		// 	'is_callable' => 'wpseo_init',
 		// ),
 		
-
-
-
 	);
 
 	/*

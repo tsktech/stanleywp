@@ -9,6 +9,7 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('text-center'); ?>>
 	<?php the_post_thumbnail('full', array('class' => 'mb-3')); ?>
 	<header class="entry-header mb-3">

@@ -123,3 +123,14 @@ require get_template_directory() . '/plugin-activation/install-plugins.php';
  * Meta Boxes.
  */
 require get_template_directory() . '/inc/metaboxes.php';
+
+/**
+ * Custom Post Types.
+ */
+// require get_template_directory() . '/inc/cpt.php';
+
+/**
+ * Custom Post Types Setting.
+ */
+// require get_template_directory() . '/inc/cpt-settings.php';
+
