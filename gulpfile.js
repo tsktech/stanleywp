@@ -5,7 +5,7 @@ var gulp 		 = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
 	reload       = browserSync.reload,
-	jshint       = require('gulp-jshint'),  
+	jshint       = require('gulp-jshint'),
 	stylish      = require('jshint-stylish' ),
 	uglify       = require('gulp-uglify'),
 	rename       = require('gulp-rename'),
@@ -14,7 +14,8 @@ var gulp 		 = require('gulp'),
 	sass         = require('gulp-sass'),
 	imagemin     = require('gulp-imagemin'),
 	changed 	 = require('gulp-changed'),
-	zip          = require('gulp-zip');
+	zip          = require('gulp-zip'),
+	critical     = require('critical');
 
 // critical 	 = require('critical') is no longer require cause could not get critical.generate to work
 // 	changed 	 = require('gulp-changed'),
@@ -28,7 +29,7 @@ var config = {
 var browserSyncWatchFiles = [
 	'./sass/**/*.scss',
     './**/*.php',
-    './js/**/*.js', 
+    './js/**/*.js',
     '!./js/dist/*.js'
 ];
 
@@ -86,7 +87,7 @@ function errorLog(error) {
 function errorLogs(error) {
     console.error.bind(error);
     this.emit('end');
-}﻿ 
+}﻿
 // .on('error', errorLogs)
 */
 
@@ -95,7 +96,7 @@ var onError = function( err ) {
   console.log( 'An error occured:', err.message );
   this.emit('end');
 }
-// .pipe(plumber()) 
+// .pipe(plumber())
 
 function zippackage (){
 	return gulp.src(zipSRC, {base: "."})
@@ -217,6 +218,31 @@ function watch () {
 	gulp.watch(browserSyncWatchFiles).on('change', browserSync.reload);
 }
 
+function criticalGen (done) {
+  critical.generate({
+      base: './',
+      src: 'http://localhost:8888/wordpress/',
+      ignore: ['@font-face'],
+      dimensions: [
+        {
+          width: 320,
+          height: 480
+        },
+        {
+          width: 768,
+          height: 1024
+        },
+        {
+          width: 1280,
+          height: 960
+        }
+      ],
+      dest: 'css/home.min.css',
+      minify: true
+  });
+  done();
+}
+
 exports.watch = watch;
 exports.zip = zippackage;
 exports.jscheck = jsCheck;
@@ -224,7 +250,9 @@ exports.scripts = scripts;
 exports.sass = sassCSS;
 exports.sassMin = sassMin;
 exports.imgmin = imgmin;
+exports.criticalGen = criticalGen;
 
 var build = gulp.parallel(watch);
-gulp.task('default', scripts);
+// gulp.task('default', scripts);
 gulp.task('default', build);
+gulp.task('default', criticalGen);
