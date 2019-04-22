@@ -1,6 +1,6 @@
 var themeName 		= 'StanleyWP';
 
-var gulp 		 = require('gulp'),
+var gulp 	     = require('gulp'),
 	plumber      = require('gulp-plumber'), // .pipe(plumber()) for geting the errors
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
@@ -13,7 +13,7 @@ var gulp 		 = require('gulp'),
 	include      = require('gulp-include'),
 	sass         = require('gulp-sass'),
 	imagemin     = require('gulp-imagemin'),
-	changed 	 = require('gulp-changed'),
+	changed      = require('gulp-changed'),
 	zip          = require('gulp-zip'),
 	critical     = require('critical');
 
