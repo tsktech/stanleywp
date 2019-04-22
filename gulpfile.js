@@ -255,4 +255,4 @@ exports.criticalGen = criticalGen;
 var build = gulp.parallel(watch);
 // gulp.task('default', scripts);
 gulp.task('default', build);
-gulp.task('default', criticalGen);
+// gulp.task('default', criticalGen);
