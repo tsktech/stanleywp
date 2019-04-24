@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
 .sticky {
 	display: block;
 }
@@ -73,7 +77,7 @@
 .error404 {
 	.content-area {
 		@include make-col-ready();
-		@include make-col(12);	
+		@include make-col(12);
 	}
 }
 
@@ -85,12 +89,26 @@
   margin:0;
   padding: 2rem 0;
 
+  .entry-title {
+    font-size: 1.5rem;
+    a {
+      color: $body-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .more-link:hover {
+    text-decoration: none;
+  }
 }
 
 .blog {
   .post {
     padding: 6rem 0;
-    
+
     &:nth-child(odd) {
       background-color: $gray-100;
     }
