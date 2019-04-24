@@ -30,7 +30,6 @@ var browserSyncWatchFiles = [
 	'./sass/**/*.scss',
     './**/*.php',
     './js/**/*.js',
-    './*.min.css',
     '!./js/dist/*.js'
 ];
 
@@ -129,7 +128,7 @@ function scripts () {
     .pipe( uglify() )
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( gulp.dest( './js/dist' ) )
-    //.pipe(browserSync.reload({stream: true}))//
+    // .pipe(browserSync.reload({stream: true}))//
     .pipe(notify({ message: 'scripts task complete' }));
 }
 
@@ -163,7 +162,7 @@ function sassCSS () {
         .pipe(sass(options.sass).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(gulp.dest('.'))
-        // .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}))
         .pipe(notify({ title: 'Sass', message: 'sass task complete'  }));
 }
 
@@ -175,7 +174,7 @@ function sassMin () {
         .pipe(autoprefixer())
         .pipe(rename( { suffix: '.min' } ) )
         .pipe(gulp.dest('.'))
-        // .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true}))
         .pipe(notify({ title: 'Sass', message: 'sass-min task complete' }));
 }
 
