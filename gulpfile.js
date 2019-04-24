@@ -30,7 +30,6 @@ var browserSyncWatchFiles = [
 	'./sass/**/*.scss',
     './**/*.php',
     './js/**/*.js',
-    '!./js/dist/*.js'
 ];
 
 //     './*.css',
