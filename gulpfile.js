@@ -63,6 +63,7 @@ var zipSRC 			= [
 	'./js/**/*',
 	'./languages/*',
 	'./sass/**/*',
+	'./plugin-activation/**/*',
 	'./template-parts/*',
 	'./templates/*',
 	'!bower_components',

@@ -52,9 +52,10 @@ $colors: (
   gray-dark: $gray-800
 ) !default;
 
+/* $custom: #1abc9c; */
 $custom-colors: #1abc9c;
 $footer-bg: #2f2f2f;
-
+/*
 $theme-colors: (
   primary: $custom-colors,
   secondary: $gray-600,
@@ -64,6 +65,10 @@ $theme-colors: (
   danger: $red,
   light: $gray-100,
   dark: $gray-800
+)*/
+
+$theme-colors: (
+  primary: $custom-colors
 )
 
 /* !default;*/

@@ -7,6 +7,8 @@
  * @package StanleyWP
  */
 
+
+
 get_header(); ?>
 
 	<div class="container">

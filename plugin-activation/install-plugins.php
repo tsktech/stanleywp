@@ -111,6 +111,12 @@ function stanleywp_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
+		array(
+			'name'      => 'Kirki',
+			'slug'      => 'kirki',
+			'required'  => true,
+		),
+
 		// // This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// // have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
 		// // 'wordpress-seo-premium'.
@@ -122,7 +128,7 @@ function stanleywp_register_required_plugins() {
 		// 	'slug'        => 'wordpress-seo',
 		// 	'is_callable' => 'wpseo_init',
 		// ),
-		
+
 	);
 
 	/*

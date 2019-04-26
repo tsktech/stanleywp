@@ -25,6 +25,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Default Bootstrap Colors
 --------------------------------------------------------------*/
+/* $custom: #1abc9c; */
+/*
+$theme-colors: (
+  primary: $custom-colors,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+)*/
 /* !default;*/
 /*
 
@@ -7396,6 +7408,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: .8rem;
   text-transform: uppercase;
   font-size: .9rem; }
+
+.custom-logo {
+  min-width: 200px; }
 
 /*--------------------------------------------------------------
 ## Footer
