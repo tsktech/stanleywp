@@ -7,6 +7,17 @@
  * @package StanleyWP
  */
 
+// Include the Redux theme options Framework
+if ( !class_exists( 'ReduxFramework' ) ) {
+	require_once( get_template_directory() . '/redux/framework.php' );
+}
+
+// Register all the theme options
+require_once( get_template_directory() . '/inc/redux-config.php' );
+
+// theme options
+require_once( get_template_directory() . '/inc/stanleywp-options.php' );
+
 if ( ! function_exists( 'stanleywp_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -126,6 +137,16 @@ require get_template_directory() . '/plugin-activation/install-plugins.php';
  * Meta Boxes.
  */
 require get_template_directory() . '/inc/metaboxes.php';
+
+/**
+ * Custom CSS.
+ */
+require get_template_directory() . '/inc/custom-css.php';
+
+/**
+ * Redux Theme Options.
+ */
+// require get_template_directory() . '/inc/stanleywp-options.php';
 
 /**
  * Custom Post Types.

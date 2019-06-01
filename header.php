@@ -19,11 +19,20 @@
 <?php wp_head(); ?>
 </head>
 
+
+
+
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
-	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary"> -->
+	    <?php
+			// $fixed = (bswp_option('disable_fixed_navbar') == '1' ? 'fixed-top' : 'navbar-static-top');
+			// $inverse = (bswp_option('disable_inverse_navbar') == '1' ? 'navbar-inverse' : 'navbar-default');
+			$fixed = (stanleywp_option('disable_fixed_navbar') == '1' ? 'fixed-top' : '');
+		?>
+	    <nav class="navbar <?php echo $fixed; ?> navbar-dark bg-primary navbar-expand-lg">
 	    	<div class="container">
 				<?php
 		    		if ( has_custom_logo() ) {
